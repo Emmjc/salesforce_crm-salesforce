@@ -323,6 +323,130 @@ Completing all 12 backend configuration milestones helped me gain hands-on exper
 
 ---
 
-✅ **Phase Status:** Fully Completed  
-📅 **Phase Duration:** Estimated 60–70 hours  
-📁 **Next Phase:** UI/UX Development & Customization
+# Phase 3: UI/UX Development & Customization (Milestones 13–20 Completed)
+
+## 🎯 Overview
+
+This phase focused on enhancing the user experience within the Tours & Travels CRM by configuring custom layouts, building dynamic forms, implementing interactive dashboards, and creating a reusable Lightning Web Component (LWC). It aimed to deliver a seamless, role-specific, and data-driven interface for all users of the system.
+
+---
+
+## 📦 Milestone 13: Lightning App Creation
+
+**Objective:**  
+Build a modern and role-specific Lightning App for Tours & Travels operations.
+
+**Key Activities:**
+- Created the **"Tours & Travels CRM"** Lightning App via App Manager.
+- Added key items: `Customer Info`, `Travel Packages`, `Bookings`, `Employees`, `Booking Payments`, `Tasks`, `Reports`, `Dashboards`.
+- Assigned access to `System Administrator` profile.
+
+---
+
+## 🧱 Milestone 14: Editing Page Layouts
+
+**Objective:**  
+Organize and personalize record layouts for each object to improve usability.
+
+**Objects Updated:**
+- `Customer Info`, `Booking`, `BookingGuest`, `TravelPackage`, `Employee`, `Booking Payments`, `Feedback`.
+
+**Highlights:**
+- Rearranged fields, added related lists, and tailored views per object to improve data entry and visibility.
+
+---
+
+## ⚙️ Milestone 15: Dynamic Forms
+
+**Objective:**  
+Make form fields responsive and context-aware.
+
+**Implementation:**
+- Enabled **Dynamic Forms** for `Booking` records.
+- Configured conditional visibility for fields like `Cancellation Date`, `Cancel Confirmation`, and `Approval Status` based on Booking Status.
+- Activated for both Desktop and Mobile views.
+
+---
+
+## 👥 Milestone 16: Users Setup
+
+**Objective:**  
+Create and assign users with appropriate roles and profiles.
+
+**Highlights:**
+- Created sample users for roles like `Travel Agent`, `Travel Agent Manager`.
+- Assigned Salesforce Platform licenses.
+- Encountered a user limit (could create 3 out of 4 planned test users).
+
+---
+
+## 📊 Milestone 17: Reports
+
+**Objective:**  
+Gain actionable insights from CRM data.
+
+**Reports Created:**
+1. **Monthly Revenue Report** – Pie chart with revenue buckets (Low/Medium/High)
+2. **Pending Payments**
+3. **Top Travel Packages (by Booking Count)**
+4. **Employee Role Distribution**
+5. +5 more custom reports tailored to business questions
+
+**Reflections:**  
+This milestone emphasized how **data visibility drives business strategy**—by analyzing payment status, top packages, and employee distribution, stakeholders can make smarter decisions.
+
+---
+
+## 📈 Milestone 18: Dashboards
+
+**Objective:**  
+Visualize key metrics from reports in a high-level format.
+
+**Activities:**
+- Created **"Tours & Travels Dashboard"** with 4 components, including Pie and Bar charts.
+- Created 2 additional dashboards using report data for role-based decision-making.
+- Enhanced non-technical user experience through visual summaries.
+
+---
+
+## ⚡ Milestone 19: Lightning Web Component (LWC)
+
+**Objective:**  
+Build an interactive UI to filter Travel Packages by Country.
+
+**Key Outputs:**
+- Developed an Apex Controller (`TravelPackageController`)
+- Built LWC `travelPackageSelector` that:
+  - Dynamically displays filtered packages
+  - Shows key travel details without page reload
+- Deployed component to App, Home, and Record pages
+
+---
+
+## 🧩 Milestone 20: Lightning App Page
+
+**Objective:**  
+Create a dedicated App Page to host the LWC.
+
+**Activities:**
+- Created `Travel Package Selector` app page
+- Embedded the `travelPackageSelector` component using Lightning App Builder
+- Activated the app page and added it to the Tours & Travels CRM navigation
+
+---
+
+## 💭 Reflection & Learnings
+
+Phase 3 allowed me to experience how Salesforce empowers UX customization without heavy code. Key insights:
+
+- **Dynamic Forms and Page Layouts** provide unmatched flexibility for tailoring record visibility.
+- **Reports and Dashboards** are not just features—they are essential tools for **business intelligence**.
+- **Lightning Web Components** offer modern frontend capabilities, making the CRM more interactive and engaging.
+- Designing with users in mind makes the platform more intuitive for both technical and non-technical roles.
+
+---
+
+✅ **Phase Status:** Completed  
+📅 **Estimated Duration:** ~70+ hours  
+📁 **Next Phase:** Data Migration, Testing & Security
+
