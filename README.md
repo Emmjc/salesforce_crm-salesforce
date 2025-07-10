@@ -446,7 +446,147 @@ Phase 3 allowed me to experience how Salesforce empowers UX customization withou
 
 ---
 
+# Phase 4: Data Migration, Testing & Security (Milestones 21–29 Completed)
+
+## 🔍 Milestone 21: Field History Tracking
+
+**Objective:**  
+Track changes to important fields for audit purposes.
+
+**Implemented On:**
+- `Booking`: Tracked changes to `Number of Travelers`, `Booking Status`, and `TravelPackage`.
+- `TravelPackage`: Tracked changes to `Price Per Person` and `Availability Status`.
+
+---
+
+## 🚫 Milestone 22: Duplicate & Matching Rules
+
+**Objective:**  
+Prevent duplicate data entry in `Customer Info`.
+
+**Steps Taken:**
+- Created a **Matching Rule** on `Email` and `Phone` using exact match.
+- Created a **Duplicate Rule** to alert users if duplicate entries are attempted, while allowing the save (for review purposes).
+
+---
+
+## 👤 Milestone 23: Profiles
+
+**Objective:**  
+Define object- and field-level access based on job functions.
+
+**Custom Profiles Created:**
+- Travel Agent (Full access to bookings and customer info)
+- Tour Guide (Read-only access)
+- Finance Officer (Access to bookings and payments)
+- Marketing Executive (Access to travel packages)
+- Customer Service Rep (Access to feedbacks)
+
+**Security Settings Updated:**
+- Session timeout: 2 hours
+- Password policies set to minimum 8 characters, never expires
+
+---
+
+## 🧭 Milestone 24: Roles & Role Hierarchy
+
+**Objective:**  
+Set up data visibility structure based on organization hierarchy.
+
+**Roles Created:**
+- Under CEO:
+  - Travel Agent Manager
+    - Travel Agent
+    - Travel Tour Guide
+  - Finance Officer
+  - Marketing Executive
+  - Customer Service Rep
+
+---
+
+## 🛡️ Milestone 25: Permission Sets
+
+**Objective:**  
+Extend specific permissions without changing base profiles.
+
+**Permission Set Created:**
+- **Extra Permission for Travel Agent Manager**
+  - Grants full CRUD access to the `TravelPackage` object
+  - Assigned directly to a Travel Agent Manager user
+
+---
+
+## 🔐 Milestone 26: Sharing Settings
+
+**Objective:**  
+Control default record visibility and enforce access rules.
+
+**Key Updates:**
+- Set `Customer Info` object OWD to **Private**
+- Added sharing rule: Auto-share Customer Info records from "Travel Agent" to "Tour Guide" with **Read-Only** access
+
+---
+
+## ✅ Milestone 27: Apex Test Classes
+
+**Objective:**  
+Validate custom logic and meet Salesforce deployment requirements.
+
+**Test Class Created:**
+- `BookingTriggerTest`
+  - Verifies trigger-based creation of `Booking_Payment__c` and `BookingGuest__c` records
+  - Ensures correct guest count and payment status
+  - Run successfully with 100% test coverage
+
+---
+
+## 🧪 Milestone 28: Test Cases & Defect Fixing
+
+**Objective:**  
+Ensure app functionality through structured testing.
+
+**Test Cases Documented:**
+1. Customer creation
+2. Booking creation and auto-creation of related records
+3. Payment status update triggering Booking confirmation and email
+4. Multiple additional test cases for real-life scenarios (e.g., cancellation flow, validation rules, duplicate prevention)
+
+🗂️ *Note: A separate test case document was submitted as part of final deliverables.*
+
+---
+
+## 📥 Milestone 29: Data Import Wizard
+
+**Objective:**  
+Import initial dataset into core objects.
+
+**Data Imported Using Wizard:**
+- `Customer Info`
+- `TravelPackage`
+- `Employee`
+
+**Highlights:**
+- CSVs with 20+ sample records per object
+- Fields were manually mapped and reviewed
+- Post-import validation performed through record listings
+
+---
+
+## 💭 Reflection & Learnings
+
+This phase helped reinforce the importance of:
+- **Clean, secure data management**
+- **Granular access control using roles, profiles, and permissions**
+- **Reliable test automation** to validate backend logic
+- **User-level visibility and collaboration** through sharing rules
+- **Streamlined data onboarding** using the Import Wizard
+
+It was a rewarding experience seeing the system behave exactly as intended across different user roles, security settings, and operational flows.
+
+---
+
 ✅ **Phase Status:** Completed  
-📅 **Estimated Duration:** ~70+ hours  
-📁 **Next Phase:** Data Migration, Testing & Security
+📅 **Estimated Duration:** ~80+ hours  
+📁 **Next Phase:** Final Review, Documentation & Deployment
+
 
